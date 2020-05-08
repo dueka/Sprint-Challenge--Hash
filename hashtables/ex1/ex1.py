@@ -6,10 +6,10 @@ def get_indices_of_item_weights(weights, length, limit):
     """
     for i in range(0, length):
         current_weight = weights[i]
-        (cache, current_weight, i)
+        # (cache, current_weight, i)
         diff = limit - current_weight
-        result = (cache, diff)
-        if result:
+        result = diff
+        if result in cache:
             if length == 2:
                 return (1, 0)
             return (i, result)
